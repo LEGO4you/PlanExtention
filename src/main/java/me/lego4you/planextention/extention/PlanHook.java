@@ -5,6 +5,11 @@ import com.djrapitops.plan.extension.ExtensionService;
 
 public class PlanHook {
 
+    public void hookIntoPlan() {
+        if (!areAllCapabilitiesAvailable()) return;
+        registerDataExtension();
+        listenForPlanReloads();
+    }
 
     private boolean areAllCapabilitiesAvailable() {
         CapabilityService capabilities = CapabilityService.getInstance();

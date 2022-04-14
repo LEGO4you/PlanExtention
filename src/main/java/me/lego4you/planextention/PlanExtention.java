@@ -14,7 +14,7 @@ public final class PlanExtention extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         try {
-            new PlanHook();
+            new PlanHook().hookIntoPlan();
         } catch (NoClassDefFoundError planIsNotInstalled) {
             PluginLogger logger = (PluginLogger) Bukkit.getLogger();
             logger.log(new LogRecord(Level.ALL, "Plan Player Analytics is not installed! please install it to propperly enable this plugin"));
