@@ -1,0 +1,6 @@
+name: PlanExtention
+version: '${project.version}'
+main: me.lego4you.planextention.PlanExtention
+api-version: 1.18
+softdepend:
+  - Plan
